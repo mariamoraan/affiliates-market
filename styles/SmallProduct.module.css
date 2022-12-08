@@ -1,39 +1,39 @@
 .container {
     padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     border-radius: 8px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    width: calc(200px + 24px);
+    width: calc(250px + 24px);
 }
 .image {
-    width: 200px;
-    height: 200px;
+    margin-right: 16px;
+    width: 60px;
+    height: auto;
     object-fit: cover;
-    margin-bottom: 8px;
     border-radius: 8px 8px 0 0;
 }
 .info {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    width: calc(250px - 80px);
+    display: flex;
+    justify-content: space-between;
 }
 .name {
     margin: 0;
+    margin-bottom: 8px;
     font-size: 16px;
     font-weight: bold;
-    grid-area: 1 / 1 / 2 / 2;
 }
 .price {
     margin: 0;
     font-size: 16px;
-    grid-area: 2 / 1 / 3 / 2;
 }
 .fav {
+    margin-left: 12px;
     display: flex;
     justify-content: flex-end;
-    align-items: flex-start;
-    grid-area: 1 / 2 / 3 / 3;
+    align-items: flex-end;
 }
 .favButton {
     background: none;

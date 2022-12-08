@@ -1,4 +1,4 @@
-enum CategoryId  {
+export enum CategoryId  {
     CLOTHES,
     TECH
 }

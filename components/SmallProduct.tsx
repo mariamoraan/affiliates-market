@@ -2,11 +2,11 @@ import FavoriteIcon from "@material-ui/icons/Favorite";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import { useState } from "react";
 import { IProduct } from "../common/types";
-import styles from '../styles/Product.module.css';
+import styles from '../styles/SmallProduct.module.css';
 
-export const PRODUCT_CARD = {gap: "24px", cardWidth: "224px"}
+export const SMALL_PRODUCT_CARD = {gap: "24px", cardWidth: "274px"}
 
-export const Product = ({product}:{product:IProduct}) => {
+export const SmallProduct = ({product}:{product:IProduct}) => {
     const [isFavorite, setIsFavorite] = useState<Boolean>(false)
     return (
         <div className={styles.container}>
@@ -19,8 +19,10 @@ export const Product = ({product}:{product:IProduct}) => {
             }} 
             />
             <div className={styles.info}>
-                <h3 className={styles.name}>{product.name}</h3>
-                <p className={styles.price}>{product.price}</p>
+                <div>
+                    <h3 className={styles.name}>{product.name}</h3>
+                    <p className={styles.price}>{product.price}</p>
+                </div>
                 <div 
                 className={styles.fav}
                 

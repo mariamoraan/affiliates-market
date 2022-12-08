@@ -1,0 +1,63 @@
+import { CategoryId, IProduct } from "./types";
+
+export const PRODUCTS_MOCK: {[key:string]: IProduct[]} = {
+    "CLOTHES": [
+        {
+            id: "1-CLOTHES",
+            category: CategoryId.CLOTHES,
+            name: "Sudadera teletrabajo",
+            color: "#1e1e2233",
+            link: "https://www.amazon.es/Divertida-Camiseta-Estas-Silencio-Teletrabajo/dp/B093X18W7M/ref=sr_1_2?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=307CJJDCE55FJ&keywords=sudadera+teletrabajo&qid=1670514222&sprefix=sudadera+teletrabajo%2Caps%2C105&sr=8-2",
+            image: "https://m.media-amazon.com/images/I/B1i3u9-Q-KS._CLa%7C2140%2C2000%7CB1GGgSId92S.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UL1500_.png",
+            description: "string",
+            price: "36.99€",
+            savedTimes: 4,
+        },
+        {
+            id: "2-CLOTHES",
+            category: CategoryId.CLOTHES,
+            name: "Sudadera teletrabajo",
+            color: "#1e1e2233",
+            link: "https://www.amazon.es/Evoluci%C3%B3n-mujeres-espalda-Teletrabajo-Sudadera/dp/B0B1245RVF/ref=sr_1_1?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=307CJJDCE55FJ&keywords=sudadera+teletrabajo&qid=1670514222&sprefix=sudadera+teletrabajo%2Caps%2C105&sr=8-1",
+            image:"https://m.media-amazon.com/images/I/B1i3u9-Q-KS._CLa%7C500%2C468%7CB1E0dkLubzL.png%7C0%2C0%2C500%2C468%2B0.0%2C0.0%2C500.0%2C468.0_AC_.png",
+            description: "string",
+            price: "36.99€",
+            savedTimes: 4,
+        },
+    ],
+    "TECH": [
+        {
+            id: "1-TECH",
+            category: CategoryId.TECH,
+            name: "Escritorio Ajustable",
+            color: "#ecebea",
+            link: "https://www.amazon.es/FLEXISPOT-Escritorio-Ordenador-El%C3%A9ctrico-Ajustable/dp/B098PZ3J16/ref=sr_1_5?keywords=standing+desk&qid=1670515141&sprefix=standing+%2Caps%2C127&sr=8-5",
+            image: "https://m.media-amazon.com/images/I/410Yv4NMR2L._AC_.jpg",
+            description: "string",
+            price: "299€",
+            savedTimes: 4,
+        },
+        {
+            id: "2-TECH",
+            category: CategoryId.TECH,
+            name: "Teclado POP KEYS Logitech",
+            color: "#bbb0d680",
+            link: "https://www.logitech.com/es-es/products/keyboards/pop-keys-wireless-mechanical.html",
+            image: "https://resource.logitech.com/w_692,c_limit,q_auto,f_auto,dpr_2.0/d_transparent.gif/content/dam/logitech/en/products/keyboards/pop-keys-wireless-mechanical/gallery/pop-keys-daydream-gallery-1-fra.png?v=1",
+            description: "Teclado mecánico inalámbrico con teclas de emojis personalizables",
+            price: "119€",
+            savedTimes: 4,
+        },
+        {
+            id: "3-TECH",
+            category: CategoryId.TECH,
+            name: "Batería portatil",
+            color: "string",
+            link: "string",
+            image: "https://m.media-amazon.com/images/I/51KxLer7bRL._AC_SX679_.jpg",
+            description: "string",
+            price: "24.99€",
+            savedTimes: 4,
+        },
+    ],
+}

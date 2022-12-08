@@ -1,0 +1,40 @@
+.carousel {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.carouselContainer {
+    padding-left: 24px;
+    margin-bottom: 12px;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    transition: 500ms ease;
+}
+.carouselElem {
+
+}
+
+.buttonsWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    align-self: center;
+}
+
+.button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    transition: 500ms ease;
+}
+
+.buttonDisabled {
+    background: none;
+    border: none;
+    outline: none;
+    opacity: 0.2;
+    transition: 500ms ease;
+}
