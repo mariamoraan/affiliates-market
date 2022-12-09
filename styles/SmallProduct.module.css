@@ -9,13 +9,19 @@
 }
 .image {
     margin-right: 16px;
-    width: 60px;
-    height: auto;
-    object-fit: cover;
+    width: 100px;
+    aspect-ratio: 1/1;
+    max-height: 100px;
+    object-fit: contain;
     border-radius: 8px 8px 0 0;
 }
 .info {
-    width: calc(250px - 80px);
+    width: calc(250px - 100px);
+    display: flex;
+    justify-content: space-between;
+}
+.infoLarge {
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
@@ -30,10 +36,10 @@
     font-size: 16px;
 }
 .fav {
-    margin-left: 12px;
+    margin-left: 8px;
     display: flex;
     justify-content: flex-end;
-    align-items: flex-end;
+    align-items: flex-start;
 }
 .favButton {
     background: none;

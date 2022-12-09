@@ -1,3 +1,5 @@
+import ArrowIcon from "@material-ui/icons/ArrowForwardIos";
+import Link from "next/link";
 import { ICategory, IProduct } from "../common/types";
 import styles from '../styles/Category.module.css';
 import { Carousel } from "./Carousel";
@@ -11,7 +13,19 @@ interface ICategoryElems {
 export const Category = ({category, products}: ICategoryElems) => {
     return(
         <div className={styles.category} key={category.id}>
-            <h1 className={styles.categoryName}>{category.name}</h1>
+            <div className={styles.head}>
+                <h2 className={styles.categoryName}>{category.name}</h2>
+                <Link  
+                href={{
+                    pathname: '/category',
+                    query: {id: category.id, name: category.name}
+                }}
+                className={styles.showMore}
+                >
+                    <p>Ver Más</p>
+                    <ArrowIcon fontSize="inherit"  />
+                </Link>
+            </div>
             <Carousel 
             childrenNumber={products.length} 
             cardWidth={SMALL_PRODUCT_CARD.cardWidth} 

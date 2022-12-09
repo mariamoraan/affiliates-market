@@ -51,7 +51,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1>Discover our items</h1>
+        <h1 className={styles.mainTitle}>Discover our items</h1>
         {
           CATEGORIES.map((category) => (
             <Category 

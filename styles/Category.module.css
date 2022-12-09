@@ -1,3 +1,19 @@
-.categoryName {
+.head {
     padding: 0 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.showMore {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 14px;
+    color: rgb(41, 74, 74);
+}
+
+.categoryName {
+    
+}
+

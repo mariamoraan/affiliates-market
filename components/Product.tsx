@@ -1,15 +1,33 @@
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { IProduct } from "../common/types";
+import { addLike, removeLike } from "../state/slices/likesSlice";
 import styles from '../styles/Product.module.css';
 
 export const PRODUCT_CARD = {gap: "24px", cardWidth: "224px"}
 
-export const Product = ({product}:{product:IProduct}) => {
-    const [isFavorite, setIsFavorite] = useState<Boolean>(false)
+export const Product = ({product, hasAnimation=true, fullWidth=false}:{product:IProduct, hasAnimation?: boolean, fullWidth?:boolean}) => {
+    const dispatch = useDispatch()
+    const likes = useSelector((state) => state.likes.likes)
+    const [isAnimated, setIsAnimated] = useState(false)
+    const [isFavorite, setIsFavorite] = useState<Boolean>(likes.filter((id: string) => id == product.id).length > 0 ? true : false)
+
+    const handleFavorite = () => {
+        if(!isFavorite) {
+            dispatch(addLike(product.id))
+        } else {
+            dispatch(removeLike(product.id))
+        }
+        setIsFavorite((prev) => !prev)  
+        setIsAnimated(hasAnimation) 
+    }
+
     return (
-        <div className={styles.container}>
+        <div className={styles.container} style={{
+            width: fullWidth ? "100%" : PRODUCT_CARD.cardWidth
+        }}>
             <img 
             className={styles.image} 
             src={product.image} 
@@ -27,12 +45,12 @@ export const Product = ({product}:{product:IProduct}) => {
                 >
                     <button
                     className={styles.favButton}
-                    onClick={() => setIsFavorite(!isFavorite)}
+                    onClick={handleFavorite}
                     >
                         {
                             isFavorite ? 
-                            <FavoriteIcon className={styles.favIcon} />  : 
-                            <FavoriteBorderIcon className={styles.favIcon} />
+                            <FavoriteIcon className={isAnimated ? styles.favIcon : ''} />  : 
+                            <FavoriteBorderIcon className={isAnimated ? styles.favIcon : ''} />
                         }
                     </button>
                 </div>

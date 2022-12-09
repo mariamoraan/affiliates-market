@@ -1,0 +1,19 @@
+.products {
+    width: 100%;
+    padding: 12px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    list-style: none;
+}
+
+.smallProduct{
+    display: flex;
+    justify-content: flex-start;
+    grid-area: auto / auto / auto / auto;
+}
+
+.bigProduct {
+    grid-area: auto / 1 / span 1 / 3;
+}
+

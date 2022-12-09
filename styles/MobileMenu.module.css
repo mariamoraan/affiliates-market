@@ -1,0 +1,25 @@
+.menuWrapper {
+    position: fixed;
+    bottom: 12px;
+    padding: 0 24px;
+    margin: 12px;
+    height: 70px;
+    width: calc(100% - 24px);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;    
+    background: #1A2129;
+    border-radius: 24px;
+    color: white;
+}
+
+.link {
+    transition: 500ms ease;
+    border-bottom: 2px solid transparent;
+}
+
+.activeLink {
+    transition: 500ms ease;
+    border-bottom: 2px solid white;
+}

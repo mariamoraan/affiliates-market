@@ -1,3 +1,11 @@
+.main {
+  min-height: 100%;
+}
+
+.mainTitle {
+  text-align: center;
+}
+
 .categoryName {
   padding: 0 12px;
 }
